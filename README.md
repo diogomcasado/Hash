@@ -1,4 +1,4 @@
-# Hash
+# Hash generator
 
 Hash generator from text input in java.
 Algorithms:
