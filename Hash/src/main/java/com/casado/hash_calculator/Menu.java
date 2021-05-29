@@ -49,7 +49,7 @@ public class Menu extends javax.swing.JFrame {
 
         jLabel1.setText("Algorithm:");
 
-        cbAlgo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "MD2", "MD5", "SHA-1", "SHA-256", "SHA-512", "Base64" }));
+        cbAlgo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "MD2", "MD5", "SHA-1", "SHA-256", "SHA-512", "Base64", "Hex" }));
         cbAlgo.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 cbAlgoItemStateChanged(evt);
@@ -167,13 +167,17 @@ public class Menu extends javax.swing.JFrame {
                 txtOutput.setText(Base_64.encrypt(txtInput.getText()));
                 System.out.println("Base64");
                 break;
+            case 6:
+                txtOutput.setText(Hex.encrypt(txtInput.getText()));
+                System.out.println("Hex");
+                break;
         }
 
 
     }//GEN-LAST:event_btnEncodeActionPerformed
 
     private void cbAlgoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cbAlgoItemStateChanged
-        if (cbAlgo.getSelectedIndex() == 5) {
+        if (cbAlgo.getSelectedIndex() == 5 || cbAlgo.getSelectedIndex() == 6) {
             btnDecode.setEnabled(true);
         } else {
             btnDecode.setEnabled(false);
@@ -190,8 +194,17 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCopyActionPerformed
 
     private void btnDecodeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDecodeActionPerformed
-        txtOutput.setText(Base_64.decrypt(txtInput.getText()));
-        System.out.println("Base64");
+        switch (cbAlgo.getSelectedIndex()) {
+            case 5:
+                txtOutput.setText(Base_64.decrypt(txtInput.getText()));
+                System.out.println("Base64");
+                break;
+            case 6:
+                txtOutput.setText(Hex.decrypt(txtInput.getText()));
+                System.out.println("Hex");
+                break;
+        }
+        
     }//GEN-LAST:event_btnDecodeActionPerformed
 
     /**

@@ -84,13 +84,14 @@
     <Component class="javax.swing.JComboBox" name="cbAlgo">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="6">
+          <StringArray count="7">
             <StringItem index="0" value="MD2"/>
             <StringItem index="1" value="MD5"/>
             <StringItem index="2" value="SHA-1"/>
             <StringItem index="3" value="SHA-256"/>
             <StringItem index="4" value="SHA-512"/>
             <StringItem index="5" value="Base64"/>
+            <StringItem index="6" value="Hex"/>
           </StringArray>
         </Property>
       </Properties>
