@@ -8,5 +8,6 @@ Algorithms:
 - SHA-256
 - SHA-512
 - Base64
+- Hex
 
 ![Screenshot](https://github.com/diogomcasado/Hash/blob/main/main.PNG)
