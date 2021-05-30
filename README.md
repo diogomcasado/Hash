@@ -1,6 +1,6 @@
 # Hash generator
 
-Hash generator from text input in java.
+String converter from text input to a algorithm.
 Algorithms:
 - MD2
 - MD5
